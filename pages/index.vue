@@ -26,9 +26,9 @@ const signInWithEmail = async () => {
 
 
 // Check if user is logged in.
-watchEffect(() => {
-  if (user.value) {
-    navigateTo("/auth");
+watch(user, async (user) => {
+  if (user) {
+    navigateTo("/");
   }
-});
+})
 </script>
